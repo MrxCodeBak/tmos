@@ -14,7 +14,7 @@ public class InterceptorConfigurer implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        // todo "/druid/**"
+        // todo 需要拦截druid下面的请求
         registry.addInterceptor(new AdminLoginInterceptor())
                 .addPathPatterns("/admin/**", "/swagger-ui.html")
                 .excludePathPatterns("/admin/login", "/admin/lib/**", "/admin/css/**", "/admin/images/**");
