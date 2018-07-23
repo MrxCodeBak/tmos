@@ -21,7 +21,7 @@ public class AdminLoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String url = request.getRequestURI();
-        log.info("系统登录拦截,地址-->{}", url);
+        log.info("后台管理系统登录拦截,地址-->{}", url);
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute(WebConst.SESSION_USER);
         if (user != null) {
